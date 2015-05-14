@@ -22,7 +22,8 @@ class WebResource:
 
         resp.status = falcon.HTTP_200  # This is the default status
         resp.content_type = 'text/html'
-        resp.body= ('<html>'
+        resp.body= ('<!DOCTYPE html>'
+                    '<html>'
                      '<head>'
                      '  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'
                      '</head>'
