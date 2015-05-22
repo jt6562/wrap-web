@@ -14,7 +14,6 @@ if debug:
     logger.setLevel(logging.DEBUG)
     _L = logger.debug
 
-
 class WebResource:
     def on_get(self, req, resp):
         """Handles GET requests"""
@@ -31,11 +30,12 @@ class WebResource:
         body_style = 'overflow:hidden; margin:0px; padding:0px;'
         iframe_style = 'width:100%; height:100%; border:0px; margin:0px; padding:0px;'
 
-        resp.status = falcon.HTTP_200  # This is the default status
+        resp.status = falcon.HTTP_200
         resp.content_type = 'text/html'
         resp.body= ( '<html>'
                      '<head>'
                      '  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'
+                     '  <meta name="viewport" content="width=device-width, initial-scale=1"/>'
                      '</head>'
                      '<body style="%s">'
                      '  <iframe src="%s" style="%s" seamless>'
